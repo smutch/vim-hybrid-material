@@ -95,7 +95,8 @@ if has("gui_running") || ($NVIM_TUI_ENABLE_TRUE_COLOR && has("nvim"))
   let s:aqua       = "#8abeb7"
   let s:blue       = "#81a2be"
   let s:purple     = "#b294bb"
-  let s:window     = "#303030"
+  " let s:window     = "#303030"
+  let s:window     = s:selection
   let s:darkcolumn = "#1c1c1c"
   let s:addbg      = "#5F875F"
   let s:addfg      = "#d7ffaf"
@@ -106,18 +107,6 @@ if has("gui_running") || ($NVIM_TUI_ENABLE_TRUE_COLOR && has("nvim"))
   let s:darkred    = "#5f0000"
   let s:darkpurple = "#5f005f"
 else
-  let s:vmode      = "cterm"
-  let s:background = "234"
-  let s:window     = "236"
-  let s:darkcolumn = "234"
-  let s:addbg      = "65"
-  let s:addfg      = "193"
-  let s:changebg   = "60"
-  let s:changefg   = "189"
-  let s:darkblue   = "17"
-  let s:darkcyan   = "24"
-  let s:darkred    = "52"
-  let s:darkpurple = "53"
   if g:hybrid_use_Xresources == 1
     let s:foreground = "15"   " White
     let s:selection  = "8"    " DarkGrey
@@ -159,6 +148,19 @@ else
     let s:blue       = "110"
     let s:purple     = "139"
   endif
+  let s:vmode      = "cterm"
+  let s:background = "234"
+  " let s:window     = "236"
+  let s:window     = s:selection
+  let s:darkcolumn = "234"
+  let s:addbg      = "65"
+  let s:addfg      = "193"
+  let s:changebg   = "60"
+  let s:changefg   = "189"
+  let s:darkblue   = "17"
+  let s:darkcyan   = "24"
+  let s:darkred    = "52"
+  let s:darkpurple = "53"
 endif
 
 "}}}
